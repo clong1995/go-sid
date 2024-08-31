@@ -1,0 +1,4 @@
+github.com/clong1995/go-env v0.0.1 h1:0u1OdGwPfwvT7YpgHQrzeHZpAjL5/uu1GGrQCEPgxYQ=
+github.com/clong1995/go-env v0.0.1/go.mod h1:vLkouf4U3EZr0AZxNBSh2Wf852/zFXaUULVSzq+zK7I=
+github.com/sony/sonyflake v1.2.0 h1:Pfr3A+ejSg+0SPqpoAmQgEtNDAhc2G1SUYk205qVMLQ=
+github.com/sony/sonyflake v1.2.0/go.mod h1:LORtCywH/cq10ZbyfhKrHYgAUGH7mOBa76enV9txy/Y=
