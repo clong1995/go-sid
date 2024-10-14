@@ -1,4 +1,4 @@
-module go-sid
+module github.com/clong1995/go-sid
 
 go 1.22
 
