@@ -12,7 +12,7 @@ func TestNew(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotId := New()
+			gotId := New(0)
 			t.Logf("New() = %v", gotId)
 			t.Logf("New() = %d", gotId)
 		})
@@ -36,7 +36,7 @@ func TestFromNum(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotId := FromNum(tt.args.num)
+			gotId := FromNum(tt.args.num, 0)
 			t.Logf("FromNum() = %v", gotId)
 			t.Logf("FromNum() = %d", gotId)
 		})
@@ -61,7 +61,7 @@ func TestFromStr(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotId := FromStr(tt.args.str)
+			gotId := FromStr(tt.args.str, 0)
 			t.Logf("FromStr() = %v", gotId)
 			t.Logf("FromStr() = %d", gotId)
 		})

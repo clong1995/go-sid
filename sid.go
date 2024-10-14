@@ -7,7 +7,7 @@ import (
 )
 
 // FromStr 从字符串创建id
-func FromStr(str string) (id Id) {
+func FromStr(str string, salt uint64) (id Id) {
 	buf, err := decode(str)
 	if err != nil {
 		log.Println(err)
@@ -22,22 +22,22 @@ func FromStr(str string) (id Id) {
 
 	res := binary.LittleEndian.Uint64(buf)
 
-	id = Id(res)
+	id = Id(res + salt)
 	return
 }
 
 // FromNum 从数字创建id
-func FromNum(num uint64) (id Id) {
-	return Id(num)
+func FromNum(num uint64, salt uint64) (id Id) {
+	return Id(num + salt)
 }
 
 // New 获取一个id
-func New() (id Id) {
-	intId, err := sf.NextID()
+func New(salt uint64) (id Id) {
+	nextID, err := sf.NextID()
 	if err != nil {
 		log.Println(err)
 		return
 	}
-	id = Id(intId)
+	id = Id(nextID + salt)
 	return
 }
