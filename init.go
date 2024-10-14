@@ -10,7 +10,7 @@ import (
 var sf *sonyflake.Sonyflake
 
 func init() {
-	machineID := config.Env("MACHINE ID")
+	machineID := config.Config("MACHINE ID")
 	if machineID == "" {
 		log.Fatalln("MACHINE ID not found")
 	}
@@ -31,5 +31,3 @@ func init() {
 	}
 	log.Printf("sid created %s success\n", machineID)
 }
-
-//https://proxy.golang.org/github.com/clong1995/go-env/@v/0.0.1.mod
