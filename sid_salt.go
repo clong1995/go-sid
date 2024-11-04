@@ -6,8 +6,8 @@ import (
 	"log"
 )
 
-// deSalt 从字符串创建id
-func deSalt(str string, salt uint64) (id Id) {
+// DeSalt 从字符串创建id
+func DeSalt(str string, salt uint64) (id Id) {
 	buf, err := decode(str)
 	if err != nil {
 		log.Println(err)
@@ -26,7 +26,7 @@ func deSalt(str string, salt uint64) (id Id) {
 	return
 }
 
-// enSalt 从数字创建id
-func enSalt(num uint64, salt uint64) (id Id) {
+// EnSalt 从数字创建id
+func EnSalt(num uint64, salt uint64) (id Id) {
 	return Id(num + salt)
 }
