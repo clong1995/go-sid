@@ -10,7 +10,7 @@ import (
 var sf *sonyflake.Sonyflake
 
 func init() {
-	machineID := config.Config("MACHINE ID")
+	machineID := config.Value("MACHINE ID")
 	if machineID == "" {
 		log.Fatalln("MACHINE ID not found")
 	}
